@@ -1,0 +1,36 @@
+
+[advisories]
+yanked = "deny"
+ignore = []
+
+[licenses]
+allow = [
+    "Apache-2.0",
+    "MIT",
+]
+confidence-threshold = 1.0
+
+[bans]
+allow = []
+deny = []
+multiple-versions = "deny"
+skip-tree = []
+wildcards = "deny"
+
+[[bans.skip]]
+  crate = "wit-bindgen"
+  deny-multiple-versions = false
+  reason = "wasip2 v wasip3, this won't make a difference at runtime anyways"
+
+
+
+[sources]
+allow-git = []
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+unknown-git = "deny"
+unknown-registry = "deny"
+
+[sources.allow-org]
+github = []
+gitlab = []
+bitbucket = []
